@@ -1,0 +1,12 @@
+//Criação relatorio diario de produtos comprados no dia
+
+CREATE OR ALTER PROCEDURE [RelatorioDiario]
+AS
+BEGIN
+
+insert into tb_RelatorioP (idDate, nmProdutos)
+select n1.idDate, n1.nmProdutos
+from tb_produtos n1;
+
+END;
+GO
